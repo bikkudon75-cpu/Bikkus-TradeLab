@@ -1,33 +1,59 @@
-body{
-background:#0d1117;
-color:white;
-font-family:Arial;
-margin:0;
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f0f0f;
+  color: white;
+  text-align: center;
 }
 
-header{
-text-align:center;
-padding:20px;
-background:#161b22;
+.center {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#tvchart{
-height:500px;
+.logo {
+  width: 120px;
+  animation: float 2s infinite;
 }
 
-.stats{
-display:flex;
-justify-content:space-around;
-padding:15px;
-background:#1c2128;
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 
-button{
-padding:10px 20px;
-margin:10px;
-cursor:pointer;
+.title {
+  color: #00ffcc;
 }
 
-.controls{
-text-align:center;
+.card {
+  background: #1c1c1c;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background: #00ffcc;
+  border: none;
+  cursor: pointer;
+}
+
+.fade {
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
