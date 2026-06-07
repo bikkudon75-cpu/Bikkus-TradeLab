@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bikku TradeLab - Game Mode</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🎮 GAME MODE</h1>
+
+<div class="card">
+  💎 CRYPT: <span id="crypt">1000</span>
+</div>
+
+<div class="card">
+  ⭐ XP: <span id="xp">0</span> | Level: <span id="level">1</span>
+</div>
+
+<button onclick="playTrade()">📈 Play Trade Game</button>
+<button onclick="dailyReward()">🎁 Daily Reward</button>
+<button onclick="inviteFriend()">👥 Invite Friend (+Reward)</button>
+
+<h3>🎯 Missions</h3>
+<ul>
+  <li>✔ Win 3 trades → +500 CRYPT</li>
+  <li>✔ Play 5 games → Unlock Funded Mode</li>
+</ul>
+
+<br>
+
+<button onclick="goFunded()">🏆 Go to Funded Challenge</button>
+
+<script src="game.js"></script>
+</body>
+</html>
