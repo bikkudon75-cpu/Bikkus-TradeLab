@@ -1,50 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bikku's TradeLab</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://s3.tradingview.com/tv.js"></script>
+  <title>Bikku's TradeLab</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<header>
-  <h1>Bikku's TradeLab</h1>
-  <p>Learn • Trade • Compete • Get Funded</p>
-</header>
+<body class="center">
 
-<div class="stats">
-  <div>Balance: NPR <span id="balance">100000</span></div>
-  <div>P/L: <span id="pl">0</span></div>
-  <div>XP: <span id="xp">0</span></div>
-  <div>Level: <span id="level">Beginner</span></div>
+<div>
+  <img src="logo.png" class="logo">
+  <h1 class="title">Bikku's TradeLab</h1>
 </div>
 
-<div id="tvchart"></div>
+<div class="card">
+  <h2>🔐 Sign Up</h2>
 
-<div class="controls">
-  <button onclick="buy()">BUY</button>
-  <button onclick="sell()">SELL</button>
+  <input id="username" placeholder="Enter Name">
+
+  <button onclick="start()">Enter</button>
 </div>
 
-<section>
-  <h2>Funded Challenge</h2>
-  <p>Target: +10%</p>
-  <progress value="0" max="100" id="challenge"></progress>
-</section>
+<script>
+function start() {
+  let name = document.getElementById("username").value;
 
-<section>
-  <h2>Game Mode</h2>
-  <button onclick="dailyQuest()">Daily Quest</button>
-  <button onclick="spinReward()">Spin Reward</button>
-</section>
+  if (!name) {
+    alert("Enter name!");
+    return;
+  }
 
-<section>
-  <h2>Trade History</h2>
-  <ul id="history"></ul>
-</section>
+  localStorage.setItem("user", name);
 
-<script src="script.js"></script>
+  document.body.innerHTML = "<h1 class='fade'>Welcome " + name + "</h1><p>Loading...</p>";
+
+  setTimeout(() => {
+    window.location.href = "game.html";
+  }, 2000);
+}
+</script>
+
 </body>
 </html>
